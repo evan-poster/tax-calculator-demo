@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Towns</h1>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>State</th>
+        <th>Income Tax</th>
+        <th>Property Tax</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for town in object_list %}
+      <tr>
+        <td><a href="{% url 'town-detail' town.pk %}">{{ town.name }}</a></td>
+        <td><a href="{% url 'state-detail' town.state.pk %}">{{ town.state.name }}</a></td>
+        <td>{{ town.income_tax }}</td>
+        <td>{{ town.property_tax }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}

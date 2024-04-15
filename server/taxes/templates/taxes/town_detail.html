@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container my-4">
+    <h1 class="display-5 mb-3">{{ object.name }}</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <dl class="row">
+          <dt class="col-sm-3">Name</dt>
+          <dd class="col-sm-9">{{ object.name }}</dd>
+
+          <dt class="col-sm-3">State</dt>
+          <dd class="col-sm-9"><a href="{% url 'state-detail' object.state.pk %}">{{ object.state.name }}</a></dd>
+
+          <dt class="col-sm-3">COLA (Single)</dt>
+          <dd class="col-sm-9">{{ object.cola_single }}</dd>
+
+          <dt class="col-sm-3">COLA (Family of four)</dt>
+          <dd class="col-sm-9">{{ object.cola_four }}</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

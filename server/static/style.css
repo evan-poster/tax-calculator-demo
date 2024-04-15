@@ -1,0 +1,14 @@
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+#hero {
+    background-color: #1a356e;
+}

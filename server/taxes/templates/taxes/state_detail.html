@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ object.name }}</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Details</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>State:</strong>
+          <a href="{% url 'state-detail' pk=object.pk %}">{{ object.state }}</a>
+        </li>
+        <li class="list-group-item">
+          <strong>COLA (Single):</strong> {{ object.cola_single }}
+        </li>
+        <li class="list-group-item">
+          <strong>COLA (Family of four):</strong> {{ object.cola_four }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock content %}

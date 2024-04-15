@@ -1,2 +1,2 @@
-# wabbajack
-A basic tax-calculator website project.
+# tax-calculator-demo
+A basic tax-calculator website project. Built on django.
